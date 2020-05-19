@@ -1,0 +1,16 @@
+
+name: scrape multistate.us covid-19 data
+
+on:
+  push:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run a one-line script
+      run: spider.py "https://www.multistate.us/pages/covid-19-policy-tracker"
+
